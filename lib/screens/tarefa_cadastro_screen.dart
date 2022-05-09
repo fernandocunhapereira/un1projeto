@@ -6,6 +6,7 @@ import 'package:un1projeto/models/tarefa.dart';
 import 'package:un1projeto/models/usuario.dart';
 import 'package:un1projeto/utils/app_routes.dart';
 import '../models/projeto.dart';
+import 'package:un1projeto/data/globals.dart' as globals;
 
 class TarefaCadastroScreen extends StatefulWidget {
   //void Function(Projeto) onSubmit;
@@ -18,8 +19,13 @@ class TarefaCadastroScreen extends StatefulWidget {
 class _TarefaCadastroScreenState extends State<TarefaCadastroScreen> {
   final _tarefaControllerDescricao = TextEditingController();
 
+
   @override
   Widget build(BuildContext context) {
+
+  final projeto = ModalRoute.of(context)!.settings.arguments as Projeto;
+  Usuario usuarioSelecionado = Usuario(id: 0, nome: 'sem nome', email: 'sem email');
+
     //final projeto = ModalRoute.of(context)!.settings.arguments as Projeto;
     return Scaffold(
       appBar: AppBar(
@@ -37,28 +43,42 @@ class _TarefaCadastroScreenState extends State<TarefaCadastroScreen> {
                     child: GestureDetector(
                       onTap: (){
                         //setar o usuario da lista a tarefa
+                        _selecionarUsuario;
+                        print('clicou');
+
                       },
                       child: ListView.builder(
                         //itemCount: usuarioItem.length,
-                        itemCount: DUMMY_USUARIOS.length,
+                        //itemCount: DUMMY_USUARIOS.length,
+                        itemCount: globals.listaUsuariosGlobal.length,
                         itemBuilder: (ctx, index) {
                           //return UsuarioItem(usuarioItem[index]);
-                          return UsuarioItem(DUMMY_USUARIOS[index]);
+                          //return UsuarioItem(DUMMY_USUARIOS[index]);
+                          return UsuarioItem(globals.listaUsuariosGlobal[index]);
                         },
                       ),
                     ),
                   ),
                 ),
+        //pegar o usuario que foi clicado
+        Text('Usuario selecionado: ' + globals.listaUsuariosGlobal[globals.listaUsuariosGlobal.length - 1].nome),
 
         ElevatedButton(onPressed: salvarTarefa, child: Text('Salvar'))
       ]),
     );
   }
 
+  _selecionarUsuario(){
+    
+  }
+
   salvarTarefa() {
-    /*Tarefa novaTarefa = Tarefa(
+    Tarefa novaTarefa = Tarefa(
         id: Random().nextInt(9999),
         descricao: _tarefaControllerDescricao.text,
-    Navigator.pop(context, novaTarefa);*/
+        usuario: globals.listaUsuariosGlobal[globals.listaUsuariosGlobal.length - 1] //pegar o usuario que foi clicado
+      );
+      //projeto.tarefas.add(novaTarefa); //adicionar a tarefa criada ao projeto que veio no argument
+    Navigator.pop(context, novaTarefa);
   }
 }

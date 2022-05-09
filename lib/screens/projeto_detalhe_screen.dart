@@ -53,7 +53,7 @@ class ProjetoDetalheScreen extends StatelessWidget {
                     ),
                   ),
                 ),
-                ElevatedButton(onPressed: ()=>Navigator.pushNamed(context, AppRoutes.TAREFA_CADASTRO)/*cadastrarTarefa*/, child: Text('Cadastrar Tarefa'))      
+                ElevatedButton(onPressed: ()=>Navigator.pushNamed(context, AppRoutes.TAREFA_CADASTRO, arguments: projeto)/*cadastrarTarefa*/, child: Text('Cadastrar Tarefa'))      
               ],
             ),
           ),

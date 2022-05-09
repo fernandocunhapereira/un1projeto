@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:un1projeto/data/my_data.dart';
 import 'package:un1projeto/models/projeto.dart';
 import 'package:un1projeto/models/usuario.dart';
+import 'package:un1projeto/data/globals.dart' as globals;
 
 import '../utils/app_routes.dart';
 import 'favoritos_screen.dart';
@@ -55,7 +56,8 @@ class _TabsScreenState extends State<TabsScreen> {
   }
 
   List<Projeto> _projetos = DUMMY_PROJETOS;
-  List<Usuario> _usuarios = []/*DUMMY_USUARIOS*/;
+  //List<Usuario> _usuarios = []/*DUMMY_USUARIOS*/;
+  List<Usuario> _usuarios = globals.listaUsuariosGlobal;
 
   @override
   Widget build(BuildContext context) {
