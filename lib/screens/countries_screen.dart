@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:un1projeto/components/projeto_item.dart';
+import '../components/projeto_item.dart';
 import '../data/my_data.dart';
 
 class CountriesScreen extends StatelessWidget {
@@ -15,7 +15,8 @@ class CountriesScreen extends StatelessWidget {
           crossAxisSpacing: 20, //espacamento no eixo cruzado
           mainAxisSpacing: 20, //espacamento no eixo principal
         ),*/
-        children: /*DUMMY_COUNTRIES.map((country)*/ DUMMY_PROJETOS.map((projeto){
+        children: /*DUMMY_COUNTRIES.map((country)*/ DUMMY_PROJETOS
+            .map((projeto) {
           //return CountryItem(country);
           return ProjetoItem(projeto);
         }).toList(),

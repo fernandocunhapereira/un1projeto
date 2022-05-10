@@ -1,4 +1,4 @@
-import 'package:un1projeto/models/usuario.dart';
+import 'package:projeto2/models/usuario.dart';
 
 class Tarefa {
   int id;

@@ -1,7 +1,6 @@
 library my_proj.globals;
 
-import 'package:un1projeto/models/usuario.dart';
-
+import '../models/usuario.dart';
 
 List<Usuario> listaUsuariosGlobal = [
   Usuario(id: 1, nome: 'joao', email: 'joao@email'),
