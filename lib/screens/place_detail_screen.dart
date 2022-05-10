@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:un1projeto/models/place.dart';
+import 'package:projeto2/models/place.dart';
 
 class PlaceDetailScreen extends StatelessWidget {
   @override

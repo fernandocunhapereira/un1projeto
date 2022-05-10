@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:un1projeto/components/place_item.dart';
-import 'package:un1projeto/data/my_data.dart';
-import 'package:un1projeto/models/country.dart';
+import 'package:projeto2/components/place_item.dart';
+import 'package:projeto2/data/my_data.dart';
+import 'package:projeto2/models/country.dart';
 
 class CountryPlacesScreen extends StatelessWidget {
   //Country country;

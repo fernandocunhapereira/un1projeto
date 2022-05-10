@@ -1,15 +1,16 @@
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
-import 'package:un1projeto/models/usuario.dart';
-import 'package:un1projeto/utils/app_routes.dart';
+import 'package:projeto2/models/projeto.dart';
+import 'package:projeto2/models/screenobj.dart';
+import 'package:projeto2/models/usuario.dart';
+import 'package:projeto2/utils/app_routes.dart';
 
 import '../data/my_data.dart';
 
 class ProjetosScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-  //final usuarios = ModalRoute.of(context)!.settings.arguments as Usuario;
-
     return Container(
       // child: GridView(
       //   padding: const EdgeInsets.all(25),

@@ -1,6 +1,6 @@
 import 'dart:math';
 import 'package:flutter/material.dart';
-import 'package:un1projeto/models/usuario.dart';
+import '../models/usuario.dart';
 import '../models/projeto.dart';
 
 class UsuarioCadastroScreen extends StatefulWidget {
@@ -14,7 +14,6 @@ class UsuarioCadastroScreen extends StatefulWidget {
 class _UsuarioCadastroScreenState extends State<UsuarioCadastroScreen> {
   final _usuarioControllerNome = TextEditingController();
   final _usuarioControllerEmail = TextEditingController();
-
 
   @override
   Widget build(BuildContext context) {

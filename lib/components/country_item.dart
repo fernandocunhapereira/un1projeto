@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:un1projeto/utils/app_routes.dart';
+import 'package:projeto2/utils/app_routes.dart';
 
 import '../models/country.dart';
 

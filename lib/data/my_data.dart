@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:un1projeto/models/place.dart';
-import 'package:un1projeto/models/projeto.dart';
-import 'package:un1projeto/models/tarefa.dart';
-import 'package:un1projeto/models/usuario.dart';
+import '../models/place.dart';
+import '../models/projeto.dart';
+import '../models/tarefa.dart';
+import '../models/usuario.dart';
 
 import '../models/country.dart';
 
@@ -20,21 +20,9 @@ List<Projeto> DUMMY_PROJETOS = [
 ];
 
 List<Tarefa> DUMMY_TAREFAS = [
-  Tarefa(
-    id: 1,
-    descricao: 'tarefa1_1',
-    usuario: DUMMY_USUARIOS[0]
-  ),
-  Tarefa(
-    id: 1,
-    descricao: 'tarefa1_2',
-    usuario: DUMMY_USUARIOS[1]
-  ),
-  Tarefa(
-    id: 2,
-    descricao: 'tarefa2',
-    usuario: DUMMY_USUARIOS[2]
-  ),
+  Tarefa(id: 1, descricao: 'tarefa1_1', usuario: DUMMY_USUARIOS[0]),
+  Tarefa(id: 1, descricao: 'tarefa1_2', usuario: DUMMY_USUARIOS[1]),
+  Tarefa(id: 2, descricao: 'tarefa2', usuario: DUMMY_USUARIOS[2]),
 ];
 
 List<Usuario> DUMMY_USUARIOS = [

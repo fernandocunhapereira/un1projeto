@@ -1,7 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:un1projeto/screens/tarefa_cadastro_screen.dart';
-import 'package:un1projeto/screens/usuario_cadastro_screen.dart';
-import 'models/projeto.dart';
 import 'screens/projeto_cadastro.dart';
 import 'screens/projeto_detalhe_screen.dart';
 
@@ -9,6 +6,8 @@ import 'screens/countries_places_screen.dart';
 import 'screens/place_detail_screen.dart';
 import 'screens/settings_screen.dart';
 import 'screens/tabs_screen.dart';
+import 'screens/tarefa_cadastro_screen.dart';
+import 'screens/usuario_cadastro_screen.dart';
 import 'utils/app_routes.dart';
 
 void main() => runApp(MyApp());
@@ -30,9 +29,7 @@ class MyApp extends StatelessWidget {
                   headline6: TextStyle(
                 fontSize: 20,
                 fontFamily: 'RobotoCondensed',
-              )
-            )
-        ),
+              ))),
       initialRoute: '/',
       routes: {
         AppRoutes.HOME: (ctx) => TabsScreen(),

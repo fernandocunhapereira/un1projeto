@@ -1,12 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:un1projeto/data/my_data.dart';
-import 'package:un1projeto/models/projeto.dart';
-import 'package:un1projeto/models/usuario.dart';
-import 'package:un1projeto/data/globals.dart' as globals;
-
+import '../data/my_data.dart';
+import '../models/projeto.dart';
+import '../models/usuario.dart';
 import '../utils/app_routes.dart';
-import 'favoritos_screen.dart';
 import 'projetos_screen.dart';
+import '../data/globals.dart' as globals;
 
 class TabsScreen extends StatefulWidget {
   @override
@@ -32,16 +30,16 @@ class _TabsScreenState extends State<TabsScreen> {
     switch (index) {
       case 0:
         ProjetosScreen();
+        // screenobj _objs = screenobj(projetos: _projetos, usuarios: _usuarios);
+        // var result = await Navigator.pushNamed(context, AppRoutes.PROJETO_LISTA,
+        //     arguments: _objs);
         break;
-        /*var result =
-            await Navigator.pushNamed(context, AppRoutes.PROJETO_LISTA,
-                  arguments: _usuarios);
-        break;*/
-
       case 1:
         var result =
             await Navigator.pushNamed(context, AppRoutes.PROJETO_CADASTRO);
-        _projetos.add(result as Projeto);
+        if (result != null) {
+          _projetos.add(result as Projeto);
+        }
         break;
       case 2:
         var result =
@@ -74,7 +72,8 @@ class _TabsScreenState extends State<TabsScreen> {
           BottomNavigationBarItem(icon: Icon(Icons.home), label: 'Projetos'),
           BottomNavigationBarItem(
               icon: Icon(Icons.construction), label: 'Cadastrar Projeto'),
-          BottomNavigationBarItem(icon: Icon(Icons.person_add), label: 'Cadastrar Usuario'),
+          BottomNavigationBarItem(
+              icon: Icon(Icons.person_add), label: 'Cadastrar Usuários'),
         ],
       ),
     );
