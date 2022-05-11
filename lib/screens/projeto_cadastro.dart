@@ -18,6 +18,25 @@ class _ProjetoCadastroScreenState extends State<ProjetoCadastroScreen> {
 
   final _projetoControllerPrazo = TextEditingController();
 
+  DateTime _dataSelecionada = DateTime.now();
+
+  _showDatePicker() {
+    showDatePicker(
+            context: context,
+            initialDate: DateTime.now(),
+            firstDate: DateTime.now(),
+            lastDate: DateTime(2050))
+        .then((pickedDate) {
+      if (pickedDate == null) {
+        return;
+      }
+      //return pickedDate;
+      setState(() {
+        _dataSelecionada = pickedDate;
+      });
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
     //final projeto = ModalRoute.of(context)!.settings.arguments as Projeto;
@@ -34,10 +53,11 @@ class _ProjetoCadastroScreenState extends State<ProjetoCadastroScreen> {
           controller: _projetoControllerDescricao,
           decoration: InputDecoration(labelText: 'Descricao'),
         ),
-        TextField(
+        /*TextField(
           controller: _projetoControllerPrazo,
           decoration: InputDecoration(labelText: 'Prazo Entrega'),
-        ),
+        ),*/
+        TextButton(onPressed: _showDatePicker, child: Text('Prazo Entrega')),
         ElevatedButton(onPressed: salvarProjeto, child: Text('Salvar'))
       ]),
     );
@@ -47,7 +67,7 @@ class _ProjetoCadastroScreenState extends State<ProjetoCadastroScreen> {
     Projeto novoProjeto = Projeto(
         id: Random().nextInt(9999),
         titulo: _projetoControllerTitulo.text,
-        prazo: DateTime.now(),
+        prazo: /*DateTime.now(),*/_dataSelecionada,
         descricao: _projetoControllerDescricao.text);
     Navigator.pop(context, novoProjeto);
   }

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:projeto2/models/place.dart';
-import 'package:projeto2/utils/app_routes.dart';
+
+import '../models/place.dart';
+import '../utils/app_routes.dart';
 
 class PlaceItem extends StatelessWidget {
   final Place place;

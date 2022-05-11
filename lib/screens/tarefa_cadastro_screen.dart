@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:projeto2/data/my_data.dart';
 import '../components/usuario_item.dart';
 import '../models/tarefa.dart';
 import '../models/usuario.dart';

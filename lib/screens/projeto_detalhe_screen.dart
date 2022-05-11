@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:projeto2/models/tarefa.dart';
 
 import '../components/tarefa_item.dart';
 import '../data/my_data.dart';
 import '../models/projeto.dart';
+import '../models/tarefa.dart';
 import '../utils/app_routes.dart';
 
 class ProjetoDetalheScreen extends StatefulWidget {
