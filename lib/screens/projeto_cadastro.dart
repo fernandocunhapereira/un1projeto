@@ -45,6 +45,45 @@ class _ProjetoCadastroScreenState extends State<ProjetoCadastroScreen> {
         title: Text('Cadastrar Projeto'),
       ),
       body: Column(children: <Widget>[
+        Card(
+          shape:
+                RoundedRectangleBorder(borderRadius: BorderRadius.circular(8)),
+            elevation: 4,
+            margin: const EdgeInsets.all(10),
+            color: Color.fromARGB(255, 238, 229, 248),
+            child: Column(children: <Widget>[
+              Padding(
+                padding: const EdgeInsets.all(8.0),
+                  child:TextField(
+                    controller: _projetoControllerTitulo,
+                    decoration: InputDecoration(
+                      labelText: 'Título',
+                      border: OutlineInputBorder(),
+                    ),
+                  ),
+              ),
+              Padding(padding: const EdgeInsets.all(8.0),
+                child: TextField(
+                  controller: _projetoControllerDescricao,
+                  decoration: InputDecoration(
+                    labelText: 'Descricao',
+                    border: OutlineInputBorder(),
+                    ),
+                ),
+              )
+            ]
+            )
+        ),
+        Divider(
+            height: 20,
+        ),
+        ElevatedButton(onPressed: _showDatePicker, child: Text('Prazo Entrega')),
+        Divider(
+            height: 20,
+        ),
+        ElevatedButton(onPressed: salvarProjeto, child: Text('Salvar')),
+        
+        /*
         TextField(
           controller: _projetoControllerTitulo,
           decoration: InputDecoration(labelText: 'Título'),
@@ -53,13 +92,10 @@ class _ProjetoCadastroScreenState extends State<ProjetoCadastroScreen> {
           controller: _projetoControllerDescricao,
           decoration: InputDecoration(labelText: 'Descricao'),
         ),
-        /*TextField(
-          controller: _projetoControllerPrazo,
-          decoration: InputDecoration(labelText: 'Prazo Entrega'),
-        ),*/
         TextButton(onPressed: _showDatePicker, child: Text('Prazo Entrega')),
-        ElevatedButton(onPressed: salvarProjeto, child: Text('Salvar'))
-      ]),
+        ElevatedButton(onPressed: salvarProjeto, child: Text('Salvar'))*/
+      ]
+      ),
     );
   }
 

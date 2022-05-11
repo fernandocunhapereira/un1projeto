@@ -33,11 +33,42 @@ class _TarefaCadastroScreenState extends State<TarefaCadastroScreen> {
         title: Text('Cadastrar Tarefa'),
       ),
       body: Column(children: <Widget>[
-        TextField(
+        Card(
+          shape:
+                RoundedRectangleBorder(borderRadius: BorderRadius.circular(8)),
+            elevation: 4,
+            margin: const EdgeInsets.all(10),
+            color: Color.fromARGB(255, 238, 229, 248),
+            child: Column(children: <Widget>[
+              Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: TextField(
+                  controller: _tarefaControllerDescricao,
+                  decoration: InputDecoration(
+                    labelText: 'Descricao da tarefa',
+                    border: OutlineInputBorder(),
+                    ),
+                ),
+              )
+            ]
+          )
+        ),
+        Divider(
+            height: 20,
+          ),
+        /*TextField(
           controller: _tarefaControllerDescricao,
           decoration: InputDecoration(labelText: 'Descricao da tarefa'),
+        ),*/
+        
+        Card(
+          shape:
+            RoundedRectangleBorder(borderRadius: BorderRadius.circular(8)),
+            elevation: 4,
+            margin: const EdgeInsets.all(10),
+            color: Color.fromARGB(255, 238, 229, 248),
+          child: Text('Atribua um usuario a tarefa:')
         ),
-        Text('Atribua um usuario a tarefa:'),
 
         Expanded(
           child: SizedBox(
