@@ -67,7 +67,11 @@ class _TarefaCadastroScreenState extends State<TarefaCadastroScreen> {
             elevation: 4,
             margin: const EdgeInsets.all(10),
             color: Color.fromARGB(255, 238, 229, 248),
-          child: Text('Atribua um usuario a tarefa:')
+          child: 
+            Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: Text('Atribua um usuario a tarefa:')
+            )
         ),
 
         Expanded(

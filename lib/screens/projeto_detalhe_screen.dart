@@ -56,6 +56,9 @@ class _ProjetoDetalheScreenState extends State<ProjetoDetalheScreen> {
         child: Column(
           children: <Widget>[
             Text(projeto.descricao),
+            Divider(
+              height: 20,
+            ),
             Expanded(
               child: SizedBox(
                 height: 200.0,
