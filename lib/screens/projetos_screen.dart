@@ -1,12 +1,10 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
-import 'package:projeto2/models/projeto.dart';
-import 'package:projeto2/models/screenobj.dart';
-import 'package:projeto2/models/usuario.dart';
-import 'package:projeto2/utils/app_routes.dart';
 
 import '../data/my_data.dart';
+import '../utils/app_routes.dart';
 
 class ProjetosScreen extends StatelessWidget {
   @override
@@ -36,6 +34,7 @@ class ProjetosScreen extends StatelessWidget {
             },
             child: Card(
               child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   Text(projeto.titulo),
                   Container(
