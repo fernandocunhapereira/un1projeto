@@ -1,14 +1,12 @@
+import 'package:f3_lugares/models/place.dart';
+import 'package:f3_lugares/screens/countries_places_screen.dart';
+import 'package:f3_lugares/screens/place_detail_screen.dart';
+import 'package:f3_lugares/screens/settings_screen.dart';
+import 'package:f3_lugares/screens/tabs_screen.dart';
+import 'package:f3_lugares/utils/app_routes.dart';
 import 'package:flutter/material.dart';
-import 'screens/projeto_cadastro.dart';
-import 'screens/projeto_detalhe_screen.dart';
 
-import 'screens/countries_places_screen.dart';
-import 'screens/place_detail_screen.dart';
-import 'screens/settings_screen.dart';
-import 'screens/tabs_screen.dart';
-import 'screens/tarefa_cadastro_screen.dart';
-import 'screens/usuario_cadastro_screen.dart';
-import 'utils/app_routes.dart';
+import 'screens/countries_screen.dart';
 
 void main() => runApp(MyApp());
 
@@ -16,11 +14,11 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Gerenciador de Projetos',
+      title: 'PlacesToGo',
       theme: ThemeData(
-          colorScheme: ThemeData().colorScheme.copyWith(
-              primary: Color.fromARGB(255, 80, 29, 161),
-              secondary: Color.fromARGB(255, 245, 245, 48)),
+          colorScheme: ThemeData()
+              .colorScheme
+              .copyWith(primary: Colors.purple, secondary: Colors.amber),
           //primarySwatch: Colors.purple,
           //accentColor: Colors.amber,
           fontFamily: 'Raleway',
@@ -36,10 +34,6 @@ class MyApp extends StatelessWidget {
         AppRoutes.COUNTRY_PLACES: (ctx) => CountryPlacesScreen(),
         AppRoutes.PLACES_DETAIL: (ctx) => PlaceDetailScreen(),
         AppRoutes.SETTINGS: (ctx) => SettingsScreen(),
-        AppRoutes.PROJETO_DETALHE: (ctx) => ProjetoDetalheScreen(),
-        AppRoutes.PROJETO_CADASTRO: (ctx) => ProjetoCadastroScreen(),
-        AppRoutes.USUARIO_CADASTRO: (ctx) => UsuarioCadastroScreen(),
-        AppRoutes.TAREFA_CADASTRO: (ctx) => TarefaCadastroScreen(),
       },
     );
   }
